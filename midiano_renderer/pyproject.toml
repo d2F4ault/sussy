@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "midiano-batch-renderer"
+version = "1.0.0"
+description = "High-performance falling-notes piano video batch renderer with NVENC and real-time Playwright capture."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Midiano Batch Studio Team" }
+]
+dependencies = [
+    "customtkinter>=5.2.0",
+    "playwright>=1.40.0",
+    "mido>=1.3.0",
+    "packaging>=23.0",
+    "darkdetect>=0.8.0"
+]
+
+[project.scripts]
+midiano-renderer = "midiano_renderer.main:main"
